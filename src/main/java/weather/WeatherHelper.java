@@ -1,10 +1,13 @@
 package weather;
 
+import Utils.Utils;
 import com.google.gson.Gson;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
+import java.util.ResourceBundle;
 
 public class WeatherHelper {
+    private static ResourceBundle config = Utils.getPropertiesFile();
 
     public WeatherDTO GetWeather() {
         Gson gson = new Gson();
@@ -12,17 +15,17 @@ public class WeatherHelper {
         try {
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
-                    .url("https://weatherbit-v1-mashape.p.rapidapi.com/current?lon=30.59&lat=50.53")
+                    .url(config.getString("WeatherApiUrl"))
                     .get()
-                    .addHeader("X-RapidAPI-Key", "0c4d48f8d5msh22092aa0a6fd004p1b9d00jsn88d5e220a56e")
-                    .addHeader("X-RapidAPI-Host", "weatherbit-v1-mashape.p.rapidapi.com")
+                    .addHeader("X-RapidAPI-Key", config.getString("WeatherApiToken"))
+                    .addHeader("X-RapidAPI-Host", config.getString("WeatherApiHost"))
                     .build();
             var weatherResponseBody = client.newCall(request).execute().body();
             weather = gson.fromJson(weatherResponseBody.string(), WeatherDTO.class);
+            System.out.println(weather);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return weather;
     }
-
 }

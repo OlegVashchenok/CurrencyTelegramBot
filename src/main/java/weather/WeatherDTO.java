@@ -2,11 +2,12 @@ package weather;
 
 import java.util.ArrayList;
 
+
 public class WeatherDTO {
-    private int count;
+    private float count;
     private ArrayList<Data> data;
 
-    public void setCount(int count) {
+    public void setCount(float count) {
         this.count = count;
     }
 
@@ -14,7 +15,7 @@ public class WeatherDTO {
         this.data = data;
     }
 
-    public int getCount() {
+    public float getCount() {
         return count;
     }
 
@@ -36,22 +37,22 @@ public class WeatherDTO {
         private String timezone;
         private String ob_time;
         private String country_code;
-        private int clouds;
-        private int vis;
+        private float clouds;
+        private float vis;
         private double wind_spd;
         private double lat;
         private String wind_cdir_full;
         private double slp;
         private String datetime;
-        private int ts;
-        private int h_angle;
+        private float ts;
+        private float h_angle;
         private double dewpt;
-        private int uv;
-        private int wind_dir;
+        private float uv;
+        private float wind_dir;
         private double elev_angle;
-        private int ghi;
-        private int dhi;
-        private int precip;
+        private float ghi;
+        private float dhi;
+        private float precip;
         private Weather weather;
         private String sunset;
         private double temp;
@@ -61,13 +62,13 @@ public class WeatherDTO {
         private String state_code;
         private double gust;
         private String wind_cdir;
-        private int dni;
-        private int solar_rad;
-        private int aqi;
+        private float dni;
+        private float solar_rad;
+        private float aqi;
         private ArrayList<String> sources;
         private String station;
-        private int snow;
-        private int rh;
+        private float snow;
+        private float rh;
         private String pod;
 
         public void setLon(double lon) {
@@ -90,11 +91,11 @@ public class WeatherDTO {
             this.country_code = country_code;
         }
 
-        public void setClouds(int clouds) {
+        public void setClouds(float clouds) {
             this.clouds = clouds;
         }
 
-        public void setVis(int vis) {
+        public void setVis(float vis) {
             this.vis = vis;
         }
 
@@ -118,11 +119,11 @@ public class WeatherDTO {
             this.datetime = datetime;
         }
 
-        public void setTs(int ts) {
+        public void setTs(float ts) {
             this.ts = ts;
         }
 
-        public void setH_angle(int h_angle) {
+        public void setH_angle(float h_angle) {
             this.h_angle = h_angle;
         }
 
@@ -130,11 +131,11 @@ public class WeatherDTO {
             this.dewpt = dewpt;
         }
 
-        public void setUv(int uv) {
+        public void setUv(float uv) {
             this.uv = uv;
         }
 
-        public void setWind_dir(int wind_dir) {
+        public void setWind_dir(float wind_dir) {
             this.wind_dir = wind_dir;
         }
 
@@ -142,15 +143,15 @@ public class WeatherDTO {
             this.elev_angle = elev_angle;
         }
 
-        public void setGhi(int ghi) {
+        public void setGhi(float ghi) {
             this.ghi = ghi;
         }
 
-        public void setDhi(int dhi) {
+        public void setDhi(float dhi) {
             this.dhi = dhi;
         }
 
-        public void setPrecip(int precip) {
+        public void setPrecip(float precip) {
             this.precip = precip;
         }
 
@@ -190,15 +191,15 @@ public class WeatherDTO {
             this.wind_cdir = wind_cdir;
         }
 
-        public void setDni(int dni) {
+        public void setDni(float dni) {
             this.dni = dni;
         }
 
-        public void setSolar_rad(int solar_rad) {
+        public void setSolar_rad(float solar_rad) {
             this.solar_rad = solar_rad;
         }
 
-        public void setAqi(int aqi) {
+        public void setAqi(float aqi) {
             this.aqi = aqi;
         }
 
@@ -210,11 +211,11 @@ public class WeatherDTO {
             this.station = station;
         }
 
-        public void setSnow(int snow) {
+        public void setSnow(float snow) {
             this.snow = snow;
         }
 
-        public void setRh(int rh) {
+        public void setRh(float rh) {
             this.rh = rh;
         }
 
@@ -242,11 +243,11 @@ public class WeatherDTO {
             return country_code;
         }
 
-        public int getClouds() {
+        public float getClouds() {
             return clouds;
         }
 
-        public int getVis() {
+        public float getVis() {
             return vis;
         }
 
@@ -270,11 +271,11 @@ public class WeatherDTO {
             return datetime;
         }
 
-        public int getTs() {
+        public float getTs() {
             return ts;
         }
 
-        public int getH_angle() {
+        public float getH_angle() {
             return h_angle;
         }
 
@@ -282,11 +283,11 @@ public class WeatherDTO {
             return dewpt;
         }
 
-        public int getUv() {
+        public float getUv() {
             return uv;
         }
 
-        public int getWind_dir() {
+        public float getWind_dir() {
             return wind_dir;
         }
 
@@ -294,15 +295,15 @@ public class WeatherDTO {
             return elev_angle;
         }
 
-        public int getGhi() {
+        public float getGhi() {
             return ghi;
         }
 
-        public int getDhi() {
+        public float getDhi() {
             return dhi;
         }
 
-        public int getPrecip() {
+        public float getPrecip() {
             return precip;
         }
 
@@ -342,15 +343,15 @@ public class WeatherDTO {
             return wind_cdir;
         }
 
-        public int getDni() {
+        public float getDni() {
             return dni;
         }
 
-        public int getSolar_rad() {
+        public float getSolar_rad() {
             return solar_rad;
         }
 
-        public int getAqi() {
+        public float getAqi() {
             return aqi;
         }
 
@@ -362,11 +363,11 @@ public class WeatherDTO {
             return station;
         }
 
-        public int getSnow() {
+        public float getSnow() {
             return snow;
         }
 
-        public int getRh() {
+        public float getRh() {
             return rh;
         }
 
@@ -421,14 +422,14 @@ public class WeatherDTO {
 
     public class Weather {
         private String description;
-        private int code;
+        private float code;
         private String icon;
 
         public void setDescription(String description) {
             this.description = description;
         }
 
-        public void setCode(int code) {
+        public void setCode(float code) {
             this.code = code;
         }
 
@@ -440,7 +441,7 @@ public class WeatherDTO {
             return description;
         }
 
-        public int getCode() {
+        public float getCode() {
             return code;
         }
 
